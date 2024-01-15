@@ -1,0 +1,99 @@
+/*Main Layout Grid /autofill */
+
+.general-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-gallery {
+  flex-grow: 1;
+}
+
+.gallery-container {
+  padding: 2.5em 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.gallery-card {
+  min-height: 300px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-image {
+  overflow: hidden;
+  background: linear-gradient(38deg, #cb2480, #004e92);
+  border-radius: 10px;
+  display: block;
+  opacity: 0.8;
+  filter: grayscale(20%);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s ease;
+}
+
+.item4 .gallery-image {
+  object-position: center left;
+}
+.gallery-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  color: var(--primary-text);
+  text-align: center;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.gallery-card:hover .gallery-image {
+  opacity: 0.3;
+}
+.gallery-card:hover .gallery-text {
+  opacity: 1;
+}
+
+.main-gallery > h2 {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.main-gallery > p {
+  text-align: justify;
+  padding: 0 1.5rem;
+  text-indent: 1.5rem;
+}
+
+.main-gallery > p:nth-child(2):first-letter {
+  color: var(--primary-color);
+  font-size: 2rem;
+  line-height: 0.75;
+  font-weight: 600;
+}
+
+/*Adjust Styles diferent screens*/
+
+/*600px*/
+
+@media (max-width: 37.5rem) {
+  .gallery-card {
+    width: 90vw;
+  }
+  .gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    object-position: center;
+  }
+}

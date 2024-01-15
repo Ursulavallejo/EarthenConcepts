@@ -1,0 +1,108 @@
+/* Flex Layout*/
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+main > h2 {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.portrait {
+  position: relative;
+  overflow: hidden;
+  width: 60vw;
+  height: 60vw;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  margin: 1rem;
+  background-image: url(../assets/images/portrait-nidhi.jpg);
+  background-position: center;
+  background-size: contain;
+  border: 7px solid var(--background-color-rosa);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-intro > p {
+  text-align: justify;
+  margin: 1.5rem;
+  text-indent: 1rem;
+}
+
+.about-intro > h3 {
+  margin-top: 3rem;
+  padding-left: 15%;
+  font-size: clamp(20px, 4vw, 30px);
+  color: var(--primary-color);
+  background-color: var(--text-white);
+}
+
+article > p:first-letter {
+  color: var(--primary-color);
+  font-size: 2rem;
+  line-height: 0.75;
+  font-weight: 600;
+}
+
+/*Adjust Styles diferent screens*/
+
+/*600px*/
+
+@media (min-width: 37.5rem) {
+  .about-artist {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 3rem;
+    background-image: url(../assets/images/subscribe-background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+  }
+  .about-intro > h3 {
+    margin-top: 2rem;
+    background-color: transparent;
+  }
+  .about-intro {
+    max-width: 55%;
+  }
+  .about-intro p {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+  .portrait {
+    width: 35vw;
+    height: 35vw;
+    margin: 0;
+    top: 5vw;
+  }
+}
+
+/*720px*/
+@media (min-width: 45rem) {
+  .portrait {
+    top: 10vw;
+  }
+}
+
+/*960px*/
+@media (min-width: 60rem) {
+  .portrait {
+    top: 1vw;
+  }
+}
+
+/*screens 1.120px*/
+@media (min-width: 70rem) {
+  .about-intro {
+    margin-top: 3rem;
+  }
+}

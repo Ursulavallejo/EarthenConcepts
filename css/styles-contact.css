@@ -1,0 +1,126 @@
+/* Flex Layout*/
+
+.general-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+#main-container {
+  margin: 1.5rem 0.5rem;
+  flex-grow: 1;
+}
+
+/* STYLES/*
+
+/*contact form*/
+
+fieldset {
+  max-width: 85%;
+  border-radius: 8px;
+  background-color: #847e7e;
+  background-image: url(../assets/images/logo-intro.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+  border: 2px solid var(--contrast-color);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset label {
+  color: var(--contrast-color);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--contrast-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: rgba(253, 252, 252, 0.4);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+select,
+textarea::placeholder {
+  font: "Concert One", serif;
+  font-size: 1rem;
+  color: var(--text-white);
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  color: var(--text-white);
+  font: "Concert One", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid var(--contrast-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  color: #f3930a;
+  transition: 0.5s ease;
+  border: 3px dotted var(--contrast-color);
+}
+
+/* country select*/
+
+select:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+  background-color: var(--contrast-color);
+}
+
+option {
+  color: var(--background-color-rosa);
+  font-style: italic;
+  font-weight: bold;
+  background-color: rgb(17, 16, 16);
+}
+
+/*Adjust Styles diferent screens*/
+
+/*600px*/
+
+@media (min-width: 37.5rem) {
+  fieldset {
+    max-width: 50%;
+  }
+  #main-container {
+    margin: 1.5rem 2rem;
+  }
+}
+
+/*720px*/
+@media (min-width: 45rem) {
+  .general-container {
+    height: 100vh;
+  }
+  #main-container {
+    margin: 3.5rem 2rem 2rem;
+  }
+}
+
+/*960px*/
+@media (min-width: 60rem) {
+  fieldset {
+    max-width: 40%;
+  }
+}
