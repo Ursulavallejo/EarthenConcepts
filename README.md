@@ -6,6 +6,10 @@ This HTML + CSS project, developed by Ursula Vallejo Janne for her HTML & CSS co
 
 Project planning and task tracking were managed via a Trello board, ensuring a clear wireframe-to-final-layout workflow. Two initial wireframes guided the overall structure, which was then implemented with CSS Grid for page composition. Color choices (blue, pink, white, plus accent shades) were selected from Material Design Palette and defined as CSS variables; these were verified against accessibility standards using a color-contrast review tool. The final result is a clean, grid-based design that reflects both course objectives and best practices for scalable, accessible styling.
 
+
+https://github.com/user-attachments/assets/65bc45d2-9868-477e-8888-20dd4da6c7e4
+
+
 ---
 
 ### 🛠️ Technologies Used
